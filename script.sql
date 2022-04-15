@@ -100,6 +100,7 @@ UPDATE vuelos SET asientos = asientos - 1 WHERE id = 1;
 COMMIT;
 
 SELECT COUNT(id) * 100000 as ganancias FROM boletos;
+SELECT SUM(vuelo.costo) as ganancias FROM (SELECT id, costo FROM vuelos) AS vuelo INNER JOIN boletos ON vuelo.id = boletos.vuelos_fk;
 
 -- - mostrar que vuelo tiene más asientos disponibles
 
