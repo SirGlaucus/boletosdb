@@ -109,3 +109,5 @@ SELECT * FROM vuelos WHERE asientos = (SELECT MAX(asientos) FROM vuelos);
 -- - mostrar que vuelo tiene menos asientos disponibles
 
 SELECT * FROM vuelos WHERE asientos = (SELECT MIN(asientos) FROM vuelos);
+
+-- Para respaldar la base de datose ejecutar en la terminal: pg_dump -U postgres boletos_db > boletos_respaldo.sql
